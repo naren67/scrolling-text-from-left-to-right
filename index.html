@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+          <div class="container">
+                    <div class="section__one"></div>
+                    <div class="section__two">
+                              <p class="text">Gsap really doing a greate job so far. Gsap really doing a greate job so far.</p>
+                    </div>
+                    <div class="section__three"></div>
+          </div>
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>	
+
+          <script>
+                    gsap.to('.text', 3, {
+                              x:1000, 
+                              scrollTrigger: {
+                                        markers: true,
+                                        trigger:'.section__two',
+                                        start: "top center",
+                                        scrub: 1.5
+                              },
+                    
+                    })
+          </script>
+</body>
+</html>
